@@ -96,13 +96,13 @@ second face or colour.
 | Body | **Inter Tight 400 / 500** | Long Russian copy stays compact and familiar. |
 | Figures | **Inter Tight 500, tabular** | Set schemes, weights, pace and dates align in columns. |
 
-Scale: 12, 14, 16, 20, 24, 32, 44, 60, 84, 108 px. Hero uses
-`clamp(52px, 7.2vw, 108px)` with 0.92 leading. Section headings use
-`clamp(38px, 4.4vw, 60px)`. Body is 16 to 20 px at 1.5 to 1.6. Running text is
+Scale: 11, 13, 15, 19, 22, 30, 40, 54, 76, 98 px. Hero uses
+`clamp(48px, 6.6vw, 98px)` with 0.92 leading. Section headings use
+`clamp(35px, 4vw, 54px)`. Body is 15 to 19 px at 1.5 to 1.6. Running text is
 capped at 62ch. Labels are sentence case, never tracked capitals. Visible copy
 closes without full stops, by request; decimals and license versions keep their
-points. Header type is larger than body: a 24px wordmark, 18px descriptor,
-section links and bot link, and a 16px language chip. The header is a floating
+points. Header type is larger than body: a 22px wordmark, 16px descriptor,
+section links and bot link, and a 13px language chip. The header is a floating
 rounded bar, slightly wider than the content container, with a 12px top offset
 and a 22px radius.
 
