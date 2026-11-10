@@ -40,16 +40,16 @@
   --font-body: "Inter Tight", "Segoe UI", sans-serif;
   --font-figure: "Inter Tight", "Segoe UI", sans-serif;
 
-  --text-xs: 12px;
-  --text-sm: 14px;
-  --text-base: 16px;
-  --text-lg: 20px;
-  --text-xl: 24px;
-  --text-2xl: 32px;
-  --text-3xl: 44px;
-  --text-section: clamp(38px, 4.4vw, 60px);
-  --text-hero: clamp(52px, 7.2vw, 108px);
-  --text-cta: clamp(44px, 5.4vw, 84px);
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 15px;
+  --text-lg: 18px;
+  --text-xl: 21px;
+  --text-2xl: 28px;
+  --text-3xl: 38px;
+  --text-section: clamp(32px, 3.6vw, 48px);
+  --text-hero: clamp(42px, 5.8vw, 88px);
+  --text-cta: clamp(36px, 4.4vw, 68px);
 
   --space-1: 4px;
   --space-2: 8px;
@@ -307,7 +307,7 @@ button:disabled,
 
 .brand-note {
   color: var(--text-dim);
-  font-size: 18px;
+  font-size: var(--text-base);
   line-height: 1;
 }
 
@@ -321,7 +321,7 @@ button:disabled,
   border-radius: var(--radius);
   background: var(--bg);
   color: var(--text);
-  font-size: 18px;
+  font-size: var(--text-base);
   text-decoration: none;
   white-space: nowrap;
   transition: border-color 160ms ease, color 160ms ease;
@@ -364,7 +364,7 @@ button:disabled,
   display: inline-flex;
   padding: max(var(--space-2), 0.3em) max(var(--space-2), 0.5em);
   color: var(--text-dim);
-  font-size: 18px;
+  font-size: var(--text-base);
   text-decoration: none;
   transition: color 160ms ease, background-color 160ms ease;
 }
@@ -702,7 +702,7 @@ button:disabled,
   border-radius: var(--radius);
   background: var(--note-bg);
   color: var(--text-strong);
-  font-size: 17px;
+  font-size: var(--text-base);
   font-weight: 500;
   line-height: 1.35;
 }
@@ -2545,7 +2545,7 @@ button:disabled,
   overflow-wrap: break-word;
   color: var(--text-strong);
   font-family: var(--font-body);
-  font-size: clamp(32px, 3.4vw, 44px);
+  font-size: clamp(28px, 3vw, 38px);
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.01em;
@@ -2974,7 +2974,15 @@ button:disabled,
   }
 
   .header-nav {
+    position: static;
     margin-left: var(--space-3);
+  }
+
+  .header-nav-mobile {
+    top: calc(100% + var(--space-3));
+    right: var(--space-2);
+    left: var(--space-2);
+    min-width: 0;
   }
 }
 
@@ -3098,14 +3106,15 @@ button:disabled,
 
 @media (max-width: 720px) {
   :root {
-    --text-hero: clamp(48px, 14vw, 72px);
-    --text-section: clamp(36px, 9vw, 48px);
-    --text-cta: clamp(40px, 11vw, 64px);
+    --text-hero: clamp(36px, 10.5vw, 54px);
+    --text-section: clamp(27px, 7.4vw, 36px);
+    --text-cta: clamp(30px, 8.6vw, 46px);
     --gutter: clamp(16px, 5vw, 24px);
   }
 
   .header-inner {
-    gap: var(--space-4);
+    gap: var(--space-3);
+    padding-block: var(--space-4);
   }
 
   .brand-note {
@@ -3113,6 +3122,10 @@ button:disabled,
   }
 
   .header-link {
+    display: none;
+  }
+
+  .back-to-top {
     display: none;
   }
 

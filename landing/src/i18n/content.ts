@@ -431,13 +431,13 @@ const en: LandingContent = {
   },
   hero: {
     title: "Your training never gets lost",
-    lede: "Diary, programs and an AI assistant in one bot",
+    lede: "Diary, programs, AI assistant in one bot",
     cta: "Open in Telegram",
     creditLabel: "Photo:",
     ai: "AI assistant",
     highlights: [
-      { title: "Strength and programs", copy: "Sets, weights and plans" },
-      { title: "Run tracker", copy: "GPS, pace and route" },
+      { title: "Strength and programs", copy: "Sets, weights, plans" },
+      { title: "Run tracker", copy: "GPS, pace, route" },
       { title: "Progress charts", copy: "Weight, measures, volume" },
       { title: "AI assistant", copy: "Log or ask" },
     ],
@@ -615,7 +615,7 @@ const en: LandingContent = {
     exercises: ["Squats", "Bench press", "Bent-over row"],
     kg: "kg",
     done: "Done",
-    caption: "Sample entry in Tracky",
+    caption: "Sample",
     hint: "Tap an exercise",
   },
   a11y: {
