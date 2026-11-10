@@ -1,0 +1,7 @@
+# Dependencies and build output
+landing/node_modules/
+landing/dist/
+
+# OS
+.DS_Store
+Thumbs.db
