@@ -4,7 +4,7 @@ import { YOGGY_ROLE } from "../i18n/content";
 
 const CHANNEL_URL = "https://www.youtube.com/@espadasportsru";
 const BOT_URL = "https://t.me/AiTrackyBot";
-const YOGGY_URL = "https://ivanburenin.github.io/yoggy-ai/";
+const YOGGY_BOT_URL = "https://t.me/AiYoggyBot";
 const PROJECT_URLS = [CHANNEL_URL, BOT_URL];
 
 export default function DeveloperSection() {
@@ -81,7 +81,7 @@ export default function DeveloperSection() {
               <li className="developer-project">
                 <a
                   className="developer-project-link"
-                  href={YOGGY_URL}
+                  href={YOGGY_BOT_URL}
                   target="_blank"
                   rel="noreferrer"
                 >
