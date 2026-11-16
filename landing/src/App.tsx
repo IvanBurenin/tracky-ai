@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { ArrowUp, Check, Copy, Send } from "lucide-react";
+import { ArrowUp, ArrowUpRight, Check, Copy, Send } from "lucide-react";
 import AiDialog from "./components/AiDialog";
 import AppScreens from "./components/AppScreens";
 import DeveloperSection from "./components/DeveloperSection";
@@ -18,10 +18,13 @@ import RunsGoals from "./components/RunsGoals";
 import SquareField from "./components/SquareField";
 import WeekLog from "./components/WeekLog";
 import { useI18n } from "./i18n";
+import { YOGGY_CONTENT } from "./i18n/content";
 
 const BOT_URL = "https://t.me/AiTrackyBot";
 const BOT_HANDLE = "@AiTrackyBot";
 const GITHUB_URL = "https://github.com/IvanBurenin/tracky-ai";
+const YOGGY_BOT_URL = "https://t.me/AiYoggyBot";
+const YOGGY_URL = "https://ivanburenin.github.io/yoggy-ai/";
 
 function GithubMark({ size = 16 }: { size?: number }) {
   return (
@@ -39,7 +42,8 @@ function GithubMark({ size = 16 }: { size?: number }) {
 }
 
 export default function App() {
-  const { content } = useI18n();
+  const { content, lang } = useI18n();
+  const yoggy = YOGGY_CONTENT[lang];
   const [copied, setCopied] = useState(false);
   const [scrollState, setScrollState] = useState({
     scrolled: false,
@@ -282,6 +286,57 @@ export default function App() {
                 <p className="levels-lede">{content.levels.lede}</p>
               </div>
               <Levels />
+            </div>
+          </div>
+        </section>
+
+        <section id="yoggy" className="section yoggy-section" aria-labelledby="yoggy-title">
+          <div className="container">
+            <div className="yoggy-card">
+              <a
+                className="yoggy-mark"
+                href={YOGGY_URL}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Yoggy"
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}yoggy-icon.png`}
+                  alt=""
+                  width={112}
+                  height={112}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+
+              <div className="yoggy-copy">
+                <p className="yoggy-eyebrow">{yoggy.eyebrow}</p>
+                <h2 id="yoggy-title" className="yoggy-title">
+                  {yoggy.title}
+                </h2>
+                <p className="yoggy-lede">{yoggy.copy}</p>
+                <div className="yoggy-actions">
+                  <a
+                    className="button-outline yoggy-button"
+                    href={YOGGY_BOT_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Send size={18} aria-hidden="true" />
+                    {yoggy.button}
+                  </a>
+                  <a
+                    className="yoggy-site"
+                    href={YOGGY_URL}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {yoggy.site}
+                    <ArrowUpRight size={16} aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
