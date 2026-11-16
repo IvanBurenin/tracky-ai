@@ -1538,64 +1538,14 @@ export const CONTENT: Record<Language, LandingContent> = {
   zh,
 };
 
-export interface YoggyContent {
-  eyebrow: string;
-  title: string;
-  copy: string;
-  button: string;
-  site: string;
-}
-
-/** Кросс-промо второго проекта автора — Yoggy (йога и практики). */
-export const YOGGY_CONTENT: Record<Language, YoggyContent> = {
-  ru: {
-    eyebrow: "Ещё один проект",
-    title: "Yoggy — йога и спокойствие в Telegram",
-    copy:
-      "Йога, медитация и дыхательные практики, мягкий план на неделю, чек-ины и собственный ИИ-ассистент. Тихая пара к Tracky.",
-    button: "Открыть @AiYoggyBot",
-    site: "Сайт Yoggy",
-  },
-  en: {
-    eyebrow: "Another project",
-    title: "Yoggy — yoga and calm in Telegram",
-    copy:
-      "Yoga, meditation and breathing practices with a gentle weekly plan, check-ins and its own AI assistant. The quiet counterpart to Tracky.",
-    button: "Open @AiYoggyBot",
-    site: "Yoggy website",
-  },
-  de: {
-    eyebrow: "Noch ein Projekt",
-    title: "Yoggy — Yoga und Ruhe in Telegram",
-    copy:
-      "Yoga, Meditation und Atemübungen mit einem sanften Wochenplan, Check-ins und eigenem KI-Assistenten. Der ruhige Gegenpol zu Tracky.",
-    button: "Yoggy in Telegram öffnen",
-    site: "Yoggy-Website",
-  },
-  fr: {
-    eyebrow: "Un autre projet",
-    title: "Yoggy — le yoga et le calme dans Telegram",
-    copy:
-      "Yoga, méditation et respiration, un plan hebdomadaire tout doux, des check-ins et son propre assistant IA. Le pendant calme de Tracky.",
-    button: "Ouvrir @AiYoggyBot",
-    site: "Site de Yoggy",
-  },
-  es: {
-    eyebrow: "Otro proyecto",
-    title: "Yoggy — yoga y calma en Telegram",
-    copy:
-      "Yoga, meditación y respiración, un plan semanal suave, check-ins y su propio asistente de IA. La cara tranquila de Tracky.",
-    button: "Abrir @AiYoggyBot",
-    site: "Web de Yoggy",
-  },
-  zh: {
-    eyebrow: "另一个项目",
-    title: "Yoggy — Telegram 里的瑜伽与平静",
-    copy:
-      "瑜伽、冥想和呼吸练习，温和的每周计划、签到，以及自己的 AI 助手。Tracky 的安静搭档。",
-    button: "打开 @AiYoggyBot",
-    site: "Yoggy 网站",
-  },
+/** Короткая роль Yoggy для списка проектов в блоке разработчика. */
+export const YOGGY_ROLE: Record<Language, string> = {
+  ru: "Йога и практики",
+  en: "Yoga & mindfulness",
+  de: "Yoga & Achtsamkeit",
+  fr: "Yoga & pleine conscience",
+  es: "Yoga y mindfulness",
+  zh: "瑜伽与正念",
 };
 
 export const LANGUAGE_META: Array<{

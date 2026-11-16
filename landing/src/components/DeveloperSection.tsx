@@ -1,12 +1,14 @@
 import { SquarePlay } from "lucide-react";
 import { useI18n } from "../i18n";
+import { YOGGY_ROLE } from "../i18n/content";
 
 const CHANNEL_URL = "https://www.youtube.com/@espadasportsru";
 const BOT_URL = "https://t.me/AiTrackyBot";
+const YOGGY_URL = "https://ivanburenin.github.io/yoggy-ai/";
 const PROJECT_URLS = [CHANNEL_URL, BOT_URL];
 
 export default function DeveloperSection() {
-  const { content } = useI18n();
+  const { content, lang } = useI18n();
   const dev = content.developer;
 
   return (
@@ -75,6 +77,29 @@ export default function DeveloperSection() {
                   </a>
                 </li>
               ))}
+
+              <li className="developer-project">
+                <a
+                  className="developer-project-link"
+                  href={YOGGY_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span className="developer-project-id">
+                    <img
+                      className="developer-project-mark developer-project-mark--tracky"
+                      src={`${import.meta.env.BASE_URL}yoggy-icon.png`}
+                      alt=""
+                      width={24}
+                      height={24}
+                    />
+                    <span className="developer-project-name">Yoggy</span>
+                  </span>
+                  <span className="developer-project-role">
+                    {YOGGY_ROLE[lang]}
+                  </span>
+                </a>
+              </li>
             </ul>
           </div>
 
